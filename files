@@ -1,1 +1,223 @@
 
+Albert Legodi
+
+Task 1
+
+1.ls provides a list of directories which are active or defaults for work station.
+
+2.pwd it displays the current directory from the root.It implies that the active directory is displayed.
+
+3.mkdir workspace
+
+4.touch README.md
+
+5.touch CHANGELOG.md
+
+Task 2
+
+touch exercise.md
+
+mv exercise.md /tmp
+
+rm -rf /tmp/exercise.md
+
+
+
+Task 3
+
+1.  touch umuzi.md
+    touch cohort.md
+    touch recruit.md
+    
+2.N.B{using tee is similar to using echo,one is able to input data into a file}
+  N.B{ctrl ^c is used to escape from the input mode of tee command} 
+
+    
+    tee umuzi.md we are the world ctrl ^c
+
+    tee cohort.md food,food,food ctrl^c
+   
+    tee recruit.md coding is fun ctrl^c
+
+3. cat umuzi.md cohort.md recruit.md > all.md
+
+4. cat all.md > summary.md
+
+5.  echo "The End ">>summary.md
+
+Task 4
+
+1.
+    recruit@umuzi-admin:~$ locate umuzi.md
+    /home/recruit/workspace/umuzi.md
+
+2.
+    recruit@umuzi-admin:~$ locate umuzi.md >>search_result.md
+
+    recruit@umuzi-admin:~$ cat search_result.md
+    /home/recruit/workspace/umuzi.md
+   
+
+
+
+Task 5
+
+1.
+    recruit@umuzi-admin:~/Documents$ touch pad.md
+
+2.  recruit@umuzi-admin:~/Documents$ cd Desktop
+
+    recruit@umuzi-admin:~/Documents$ cd ../
+
+    recruit@umuzi-admin:~$ cd Desktop
+
+    recruit@umuzi-admin:~/Desktop$ mkdir work
+
+3.
+
+    recruit@umuzi-admin:~$ cd Documents
+
+    recruit@umuzi-admin:~/Documents$ ls
+    pad.md
+   
+    recruit@umuzi-admin:~/Documents$ cp pad.md ~/Desktop/work
+    
+    recruit@umuzi-admin:~/Documents$ ls
+    pad.md
+
+    recruit@umuzi-admin:~/Documents$ cd ~/
+
+    recruit@umuzi-admin:~$ cd Desktop
+
+    recruit@umuzi-admin:~/Desktop$ ls
+    'task 1 Linux'   work
+    
+    recruit@umuzi-admin:~/Desktop$ cd work
+
+    recruit@umuzi-admin:~/Desktop/work$ ls
+    pad.md
+
+    recruit@umuzi-admin:~/Desktop/work$ mv pad.md pad_copy.md
+
+    recruit@umuzi-admin:~/Desktop/work$ ls
+    pad_copy.md
+
+4.
+    recruit@umuzi-admin:~/Desktop/work$ locate updatedb
+
+    /etc/updatedb.conf
+    /etc/alternatives/updatedb
+    /etc/alternatives/updatedb.8.gz
+    /usr/bin/updatedb
+    /usr/bin/updatedb.mlocate
+    /usr/share/man/man5/updatedb.conf.5.gz
+    /usr/share/man/man8/updatedb.8.gz
+    /usr/share/man/man8/updatedb.mlocate.8.gz
+    
+
+
+5.
+    recruit@umuzi-admin:~/Desktop/work$ (cd -)
+
+    /home/recruit/Desktop
+    recruit@umuzi-admin:~/Desktop/work$ 
+
+6.
+    recruit@umuzi-admin:~/Desktop/work$ locate pad_copy.md
+
+    recruit@umuzi-admin:~/Desktop/work$ ls
+    pad_copy.md
+
+    
+
+Task 6
+
+1.
+
+    recruit@umuzi-admin:~$ ls
+
+    Desktop    ideaIC-2019.1-jbr11.tar.gz  Pictures          Templates
+    Documents  IdeaProjects                Public            Videos
+    Downloads  Music                       search_result.md  workspace
+
+    recruit@umuzi-admin:~$ cd Downloads
+
+    recruit@umuzi-admin:~/Downloads$ ls
+
+     code_1.41.1-1576681836_amd64.deb   jetbrains-toolbox-1.16.6207
+     idea-IC-193.5662.53                jetbrains-toolbox-1.16.6207.tar.gz
+    'ideaIC-2019.3.1(1).tar.gz'        'Trumpet Scales.pdf'
+     ideaIC-2019.3.1.tar.gz
+
+    recruit@umuzi-admin:~/Downloads$ find ~/ -name *pdf
+    /home/recruit/Downloads/Trumpet Scales.pdf
+    
+
+2.
+    recruit@umuzi-admin:~$ mv ~/Downloads/'Trumpet Scales.pdf' ~/workspace
+
+    recruit@umuzi-admin:~$ ls
+
+    Desktop    ideaIC-2019.1-jbr11.tar.gz  Pictures          Templates
+    Documents  IdeaProjects                Public            Videos
+    Downloads  Music                       search_result.md  workspace
+
+    recruit@umuzi-admin:~$ cd workspace
+
+    recruit@umuzi-admin:~/workspace$ ls
+
+     all.md         cohort.md   recruit.md  'Trumpet Scales.pdf'
+     CHANGELOG.md   README.md   summary.md   umuzi.md
+
+    recruit@umuzi-admin:~/workspace$ 
+
+
+3.
+    recruit@umuzi-admin:~$ find . -maxdepth 1 -newermt "2020-01-16"
+    .
+    ./workspace
+    ./Desktop
+    ./search_result.md
+    ./.xsession-errors
+    ./Documents
+    ./.config
+    ./Downloads
+    ./.Xauthority
+    ./.ICEauthority
+    recruit@umuzi-admin:~$ 
+
+Task 7
+
+1.
+    recruit@umuzi-admin:~$ nano
+ 
+    recruit@umuzi-admin:~$ ls
+
+    Desktop    ideaIC-2019.1-jbr11.tar.gz  my_bio.md  search_result.md  workspace
+    Documents  IdeaProjects                Pictures   Templates
+    Downloads  Music                       Public     Videos
+
+
+2.
+    recruit@umuzi-admin:~$ mkdir my_files.md
+
+    recruit@umuzi-admin:~$ ls
+
+    Desktop                     IdeaProjects  Pictures          Videos
+    Documents                   Music         Public            workspace
+    Downloads                   my_bio.md     search_result.md
+    ideaIC-2019.1-jbr11.tar.gz  my_files.md   Templates
+
+    
+    recruit@umuzi-admin:~$ mv my_bio.md my_files.md
+
+    recruit@umuzi-admin:~$ cd my_files.md
+    recruit@umuzi-admin:~/my_files.md$ ls
+    my_bio.md
+    
+
+
+
+
+
+
